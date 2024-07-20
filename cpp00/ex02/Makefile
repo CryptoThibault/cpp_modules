@@ -1,5 +1,6 @@
-NAME = megaphone
-FILES = megaphone.cpp
+NAME = dreamwork
+FILES = Account.cpp \
+	tests.cpp
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
 $(NAME):

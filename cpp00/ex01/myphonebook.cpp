@@ -1,17 +1,29 @@
 #include "myphonebook.hpp"
 
-int    main(void)
+int	main(void)
 {
-    string    line;
+	PhoneBook	phonebook();
+	string	line;
 
-    while (getline(cin, line))
-    {
-        if (line == "ADD")
-            cout << "ADD" << endl;
-        else if (line == "SEARCH")
-            cout << "SEARCH" << endl;
-        else if (line == "EXIT")
-            return (0);
-    }
-    return (0);
+	while (getline(cin, line))
+	{
+		if (line == "ADD")
+		{
+			// get contact data
+			getline();
+			
+			phonebook.add(Contact());
+		}
+		else if (line == "SEARCH")
+		{
+			phonebook.print();
+			// get index
+			getline();
+
+			phonebook.search(i);
+		}
+		else if (line == "EXIT")
+			break ;
+	}
+	return (0);
 }
