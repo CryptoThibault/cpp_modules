@@ -1,22 +1,22 @@
-#include "myphonebook.hpp"
-
+#include "PhoneBook.hpp"
+/*
 class PhoneBook {
 private :
 	Contact	array[8];
 	int	index;
+
 public :
+*/
+	PhoneBook::PhoneBook() : index(0) {}
 
-	PhoneBook()
-		: index(0) {}
-
-	void	add(Contact& elem)
+	void	PhoneBook::add(Contact& elem)
 	{
 		if (index == array.size())
 			index = 0;
 		array[index++] = elem;
 	}
 
-	void	search(int i)
+	void	PhoneBook:search(int i)
 	{
 		if (i >= 0 &&  i < array.size())
 			array[i].show();
@@ -24,7 +24,7 @@ public :
 			throw out_of_range("Index out of range");
 	}
 
-	void	print()
+	void	PhoneBook::print()
 	{
 		cout << "+-------------------------------------------+" << endl;
 		cout << "|     index|first name| last name|  nickname|"	<< endl;
@@ -38,4 +38,4 @@ public :
 		}
 		cout << "+-------------------------------------------+" << endl;
 	}
-};
+//};

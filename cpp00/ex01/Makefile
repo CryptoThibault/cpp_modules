@@ -1,5 +1,7 @@
-NAME = myphonebook
-FILES = myphonebook.cpp
+NAME = mypb
+FILES = mypb.cpp \
+	PhoneBook.cpp \
+	Contact.cpp
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
 $(NAME):

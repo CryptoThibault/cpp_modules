@@ -1,5 +1,5 @@
-#include "myphonebook.hpp"
-
+#include "Contact.hpp"
+/*
 class Contact {
 private:
 	string	firstname;
@@ -8,11 +8,11 @@ private:
 	int	number;
 
 public:
-
+*/
 	Contact()
 		: firstname(""), lastname(""), nickname(""), number(0) {}
 	
-	Contact(int i, string fn, string ln, string nn, int n)
+	Contact(string fn, string ln, string nn, int n)
 		: firstname(fn), lastname(ln), nickname(nn), number(n) {}
 	
 	void	show()
@@ -22,4 +22,4 @@ public:
 		cout << "Nickname: " << nickname << endl;
 		cout << "Number: " << number << endl;
 	}
-};
+//};
