@@ -3,8 +3,7 @@
 
 # include <iostream>
 # include <string>
-
-#include "Contact.hpp"
+# include "Contact.hpp"
 
 using namespace std;
 

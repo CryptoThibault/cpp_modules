@@ -15,7 +15,7 @@ public:
 	Contact(string fn, string ln, string nn, int n)
 		: firstname(fn), lastname(ln), nickname(nn), number(n) {}
 	
-	void	show()
+	void	Contact::show()
 	{
 		cout << "First name: " << firstname << endl;
 		cout << "Last name: " << lastname << endl;
