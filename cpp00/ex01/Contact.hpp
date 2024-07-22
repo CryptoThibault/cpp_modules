@@ -11,6 +11,8 @@ private:
 	std::string	_nickname;
 	std::string	_phoneNumber;
 	std::string	_darkestSecret;
+	std::string	_getlineFilled(std::string str);
+	std::string	_truncateTen(std::string str);
 public:
 	Contact();
 	void	create();

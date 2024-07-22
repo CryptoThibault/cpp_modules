@@ -32,5 +32,5 @@ void	PhoneBook::search() {
 		&& i >= 0 && i < 8)
 		_contacts[i].show(i);
 	else
-		std::cout << "Index is not valid" << std::endl;
+		std::cout << "Index is not valid, retry" << std::endl;
 }
