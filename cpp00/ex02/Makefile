@@ -4,11 +4,11 @@ FILES = Account.cpp \
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
 $(NAME):
-	g++ $(FLAGS) -o $@ $(FILES)
+	c++ $(FLAGS) -o $@ $(FILES)
 all: $(NAME)
 
 clean:
-	rm -f *.out
+	rm -f $(NAME)
 fclean: clean
 	rm -f $(NAME)
-re: fclean all
+re: clean all

@@ -1,25 +1,17 @@
 #include <iostream>
-#include <cctype>
-using namespace std;
 
 int	main(int ac, char **av)
 {
-	int	i;
-	int	j;
-
-	if (ac < 2)
+	if (ac == 1)
 	{
-		cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << endl;
+		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
 		return (0);
 	}
-	i = 0;
-	while (av[++i])
-	{
-		j = -1;
-		while (av[i][++j])
+	for (int i = 1; av[i]; i++) {
+		for (int j = 1; av[i][j]; j++)
 			av[i][j] = toupper(av[i][j]);
-		cout << av[i];
+		std::cout << av[i];
 	}
-	cout << endl;
+	std::cout << std::endl;
 	return (0);
 }

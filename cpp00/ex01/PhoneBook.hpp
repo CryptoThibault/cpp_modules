@@ -1,22 +1,18 @@
 #ifndef PHONEBOOK_HPP
 # define PHONEBOOK_HPP
 
-# include <iostream>
-# include <string>
 # include "Contact.hpp"
-
-using namespace std;
+# include <sstream>
+# include <cctype>
 
 class PhoneBook {
 private:
-	Contact	array[8];
-	int	index;
-
+	Contact	_contacts[8];
 public:
-	Phonebook();
-	void	add(Contact& elem);
-	void	search(int i);
+	PhoneBook();
+	void	add();
 	void	print();
+	void	search();
 };
 
 #endif
