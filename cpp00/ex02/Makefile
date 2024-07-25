@@ -1,4 +1,4 @@
-NAME = dreamwork
+NAME = account
 FILES = Account.cpp \
 	tests.cpp
 FLAGS = -Wall -Wextra -Werror -std=c++98
