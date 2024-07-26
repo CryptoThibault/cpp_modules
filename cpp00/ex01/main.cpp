@@ -1,7 +1,6 @@
 #include "PhoneBook.hpp"
 
-int	main(void)
-{
+int	main(void) {
 	PhoneBook	book;
 	std::string	line;
 
