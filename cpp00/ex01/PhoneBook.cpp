@@ -2,6 +2,8 @@
 
 PhoneBook::PhoneBook() {}
 
+PhoneBook::~PhoneBook() {}
+
 void	PhoneBook::add(void) {
 	static int	i;
 	if (i == 8)
@@ -10,7 +12,7 @@ void	PhoneBook::add(void) {
 	std::cout << "Contact created successfully at index " << i++ << std::endl;
 }
 
-void	PhoneBook::print() {
+void	PhoneBook::print(void) {
 	std::cout << "+-------------------------------------------+" << std::endl;
 	std::cout << "|            MY AWESOME PHONEBOOK           |" << std::endl;
 	std::cout << "+-------------------------------------------+" << std::endl;
@@ -21,7 +23,7 @@ void	PhoneBook::print() {
 	std::cout << "+-------------------------------------------+" << std::endl;
 }
 
-void	PhoneBook::search() {
+void	PhoneBook::search(void) {
 	std::string	strIndex;
 	std::cout << "Enter contact index: ";
 	getline(std::cin, strIndex);

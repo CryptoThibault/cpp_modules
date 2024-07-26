@@ -6,13 +6,14 @@
 # include <cctype>
 
 class PhoneBook {
-private:
-	Contact	_contacts[8];
 public:
 	PhoneBook();
-	void	add();
-	void	print();
-	void	search();
+	~PhoneBook();
+	void	add(void);
+	void	print(void);
+	void	search(void);
+private:
+	Contact	_contacts[8];
 };
 
 #endif

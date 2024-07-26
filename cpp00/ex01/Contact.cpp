@@ -2,6 +2,8 @@
 
 Contact::Contact() {}
 
+Contact::~Contact() {}
+
 std::string	Contact::_getlineFilled(std::string str) {
 	std::string input;
 
