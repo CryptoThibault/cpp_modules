@@ -8,7 +8,7 @@ int	main(int ac, char **av)
 		return (0);
 	}
 	for (int i = 1; av[i]; i++) {
-		for (int j = 1; av[i][j]; j++)
+		for (int j = 0; av[i][j]; j++)
 			av[i][j] = toupper(av[i][j]);
 		std::cout << av[i];
 	}
