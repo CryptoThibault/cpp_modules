@@ -1,15 +1,21 @@
 NAME = phonebook
-FILES = main.cpp \
-	PhoneBook.cpp \
-	Contact.cpp
+
+CPP = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-$(NAME):
-	c++ $(FLAGS) -o $@ $(FILES)
+FILES = main.cpp PhoneBook.cpp Contact.cpp
+OBJS = $(FILES:.cpp=.o)
+
 all: $(NAME)
 
+$(NAME): $(OBJS)
+	$(CPP) $(FLAGS) -o $@ $^
+%.o: %.cpp
+	$(CPP) $(FLAGS) -c $< -o $@
 clean:
+	rm -f $(OBJS)
+fclean: clean
 	rm -f $(NAME)
-fclean:
-	rm -f $(NAME)
-re: clean all
+re: fclean all
+
+.PHONY: all clean fclean re

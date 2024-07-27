@@ -1,14 +1,21 @@
 NAME = account
-FILES = Account.cpp \
-	tests.cpp
+
+CPP = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-$(NAME):
-	c++ $(FLAGS) -o $@ $(FILES)
+FILES = Account.cpp tests.cpp
+OBJS = $(FILES:.cpp=.o)
+
 all: $(NAME)
 
+$(NAME): $(OBJS)
+	$(CPP) $(FLAGS) -o $@ $^
+%.o: %.cpp
+	$(CPP) $(FLAGS) -c $< -o $@
 clean:
-	rm -f $(NAME)
+	rm -f $(OBJS)
 fclean: clean
 	rm -f $(NAME)
-re: clean all
+re: fclean all
+
+.PHONY: all clean fclean re
