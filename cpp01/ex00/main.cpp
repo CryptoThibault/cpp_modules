@@ -14,7 +14,7 @@ int	main(void) {
 	zombieB->announce();
 	delete zombieB;
 	name = "Charlie";
-	std::cout << "Zombie" << name << " will be created with randomChump." << std::endl;
+	std::cout << "Zombie " << name << " will be created with randomChump." << std::endl;
 	randomChump(name);
 	return 0;
 }
