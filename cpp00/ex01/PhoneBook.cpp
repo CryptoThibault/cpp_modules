@@ -18,7 +18,7 @@ void	PhoneBook::print(void) {
 	std::cout << "+-------------------------------------------+" << std::endl;
 	std::cout << "|     index|first name| last name|  nickname|" << std::endl;
 	std::cout << "+-------------------------------------------+" << std::endl;
-	for (int i = 0; i < 8; i++)
+	for (int i = 0; i < 8; ++i)
 		_contacts[i].view(i);
 	std::cout << "+-------------------------------------------+" << std::endl;
 }
