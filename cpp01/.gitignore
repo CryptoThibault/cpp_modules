@@ -3,8 +3,8 @@ ex01/zombiehorde
 ex02/brain
 ex03/weapon
 ex04/replace
-ex05
-ex06
+ex05/harl
+ex06/harlfilter
 */*.o
 */*.swp
 ex04/*.replace
