@@ -5,21 +5,32 @@ Harl::Harl() {}
 Harl::~Harl() {}
 
 void	Harl::complain(std::string level) {
-	t_function functions[] = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error };
 	std::string levels[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 	int	i;
 	for (i = 0; i < 4; ++i)
 		if (!levels[i].compare(level))
 			break ;
-	if (i == 4 ) {
+	switch (i) {
+	case	0:
+		std::cout << "[ DEBUG ]" << std::endl;
+		debug();
+		std::cout << std::endl; //fall through
+	case	1:
+		std::cout << "[ INFO ]" << std::endl;
+		info();
+		std::cout << std::endl; //fall through
+	case	2:
+		std::cout << "[ WARNING ]" << std::endl;
+		warning();
+		std::cout << std::endl; //fall through
+	case	3:
+		std::cout << "[ ERROR ]" << std::endl;
+		error();
+		std::cout << std::endl;
+		break ;
+	default:
 		std::cout << "[ Probably complaining about insignificant problems ]"
 			<< std::endl;
-		return ;
-	}
-	for (; i < 4; ++i) {
-		std::cout << "[ " << levels[i] << " ]" << std::endl;
-		(this->*functions[i])();	
-		std::cout << std::endl;
 	}
 }
 

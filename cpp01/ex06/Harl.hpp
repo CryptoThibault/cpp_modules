@@ -15,6 +15,4 @@ private:
 	void	error(void);
 };
 
-typedef void (Harl::*t_function)(void);
-
 #endif
