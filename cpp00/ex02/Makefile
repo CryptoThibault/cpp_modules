@@ -3,8 +3,8 @@ NAME = account
 CPP = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-FILES = Account.cpp tests.cpp
-OBJS = $(FILES:.cpp=.o)
+SRCS = Account.cpp tests.cpp
+OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
 

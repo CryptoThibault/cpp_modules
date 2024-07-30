@@ -3,8 +3,8 @@ NAME = megaphone
 CPP = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-FILES = megaphone.cpp
-OBJS = $(FILES:.cpp=.o)
+SRCS = megaphone.cpp
+OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
 
