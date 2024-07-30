@@ -3,8 +3,8 @@ NAME = fixed
 CPP = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-FILES = main.cpp Fixed.cpp
-OBJS = $(FILES:.cpp=.o)
+SRCS = main.cpp Fixed.cpp
+OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
 

@@ -22,9 +22,8 @@ Fixed::Fixed(const Fixed& other) {
 
 Fixed&	Fixed::operator=(const Fixed &other) {
 	std::cout << "Copy assignment operator called" << std::endl;
-	if (this == &other)
-		return *this;
-	_value = other.getRawBits();
+	if (this != &other)
+		_value = other.getRawBits();
 	return *this;
 }
 
@@ -48,7 +47,7 @@ int	Fixed::toInt(void) const {
 	return _value >> _nbBits;
 }
 
-std::ostream& operator<<(std::ostream& os, const Fixed& fixed) {
-    os << fixed.toFloat();
-    return os;
+std::ostream&	operator<<(std::ostream& os, const Fixed& fixed) {
+	os << fixed.toFloat();
+	return os;
 }
