@@ -3,8 +3,8 @@ NAME = zombie
 CPP = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-FILES = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
-OBJS = $(FILES:.cpp=.o)
+SRCS = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
+OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
 

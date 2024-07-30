@@ -3,8 +3,8 @@ NAME = replace
 CPP = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-FILES = main.cpp readFile.cpp replaceStrings.cpp writeFile.cpp
-OBJS = $(FILES:.cpp=.o)
+SRCS = main.cpp readFile.cpp replaceStrings.cpp writeFile.cpp
+OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
 

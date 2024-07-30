@@ -3,8 +3,8 @@ NAME = brain
 CPP = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-FILES = main.cpp
-OBJS = $(FILES:.cpp=.o)
+SRCS = main.cpp
+OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
 

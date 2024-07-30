@@ -3,8 +3,8 @@ NAME = weapon
 CPP = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-FILES = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
-OBJS = $(FILES:.cpp=.o)
+SRCS = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
+OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
 

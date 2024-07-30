@@ -3,8 +3,8 @@ NAME = zombiehorde
 CPP = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-FILES = main.cpp Zombie.cpp zombieHorde.cpp
-OBJS = $(FILES:.cpp=.o)
+SRCS = main.cpp Zombie.cpp zombieHorde.cpp
+OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
 
