@@ -16,15 +16,16 @@ void	bspTest(Point const a, Point const b, Point const c, Point const point) {
 
 int	main(void) {
 	Point const	a;
-	Point const	b(2, 0);
-	Point const	c(1, 2);
-	Point const	p1(1, 1);
-	Point const	p2(0, 1);
+	Point const	b(1.0, 3.0);
+	Point const	c(2.0, 0);
+	Point const	point1(1, 1.5);
+	Point const	point2(3, 1.5);
 
 	std::cout << "[TEST 1: INSIDE]" << std::endl;
-	bspTest(a, b, c, p1);
+	bspTest(a, b, c, point1);
+
 	std::cout << "[TEST 2: OUTSIDE]" << std::endl;
-	bspTest(a, b, c, p2);
+	bspTest(a, b, c, point2);
 	
 	return 0;
 }

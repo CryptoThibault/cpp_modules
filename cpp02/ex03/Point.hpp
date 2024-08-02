@@ -12,11 +12,9 @@ public:
 	~Point();
 	Fixed	getX(void) const;
 	Fixed	getY(void) const;
-	void	setX(const Fixed x);
-	void	setY(const Fixed y);
 private:
-	Fixed _x;
-	Fixed _y;
+	const Fixed	_x;
+	const Fixed	_y;
 };
 
 bool    bsp(Point const a, Point const b, Point const c, Point const point);
