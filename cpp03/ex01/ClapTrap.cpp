@@ -13,8 +13,12 @@ ClapTrap::ClapTrap(const ClapTrap& other) {
 }
 
 ClapTrap&	ClapTrap::operator=(const ClapTrap& other) {
-	if (this != &other)
-		*this = other;
+	if (this != &other) {
+		_name = other._name;
+		_hitPoints = other._hitPoints;
+		_energyPoints = other._energyPoints;
+		_attackDamage = other._attackDamage;
+	}	
 	return *this;
 }
 
