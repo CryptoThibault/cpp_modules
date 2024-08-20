@@ -12,7 +12,7 @@ Cat::Cat(const Cat& other): Animal(other) {
 
 Cat&	Cat::operator=(const Cat& other) {
 	if (this != &other)
-		*this = other;
+		Animal::operator=(other);
 	std::cout << "A cat is born!" << std::endl;
 	return *this;
 }

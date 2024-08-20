@@ -1,7 +1,7 @@
 #include "WrongCat.hpp"
 
 WrongCat::WrongCat(): WrongAnimal() {
-	_type = "WrongCat";
+	_type = "Cat";
 	std::cout << "A cat is born!" << std::endl;
 }
 

@@ -11,7 +11,7 @@ WrongAnimal::WrongAnimal(const WrongAnimal& other) {
 
 WrongAnimal&	WrongAnimal::operator=(const WrongAnimal& other) {
 	if (this != &other)
-		*this = other;
+		_type = other._type;
 	std::cout << "An animal is born!" << std::endl;
 	return *this;
 }
