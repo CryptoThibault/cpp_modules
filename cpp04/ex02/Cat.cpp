@@ -6,6 +6,17 @@ Cat::Cat(): Animal() {
 	std::cout << "A cat is born!" << std::endl;
 }
 
+Cat::Cat(const Cat& other): Animal(other) {
+	std::cout << "A cat is born!" << std::endl;
+}
+
+Cat&	Cat::operator=(const Cat& other) {
+	if (this != &other)
+		*this = other;
+	std::cout << "A cat is born!" << std::endl;
+	return *this;
+}
+
 Cat::~Cat() {
 	delete _brain;
 	std::cout << "A cat died!" << std::endl;
