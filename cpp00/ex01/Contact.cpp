@@ -10,6 +10,10 @@ std::string	Contact::_getlineFilled(std::string str) {
 	while (true) {
 		std::cout << str;
 		std::getline(std::cin, input);
+		if (std::cin.eof()) {
+			std::cout << "End of file detected, exiting" << std::endl;
+			exit(EXIT_FAILURE);
+		}
 		if (!input.empty())
 			break;
 		std::cout << "Input can't be empty" << std::endl;
