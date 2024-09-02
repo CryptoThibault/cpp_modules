@@ -6,7 +6,7 @@
 int	main(void) {
 	try {
 		Bureaucrat	bob("Bob", 1);
-		ShrubberyCreationForm	 shrubberyCreation("home");
+		ShrubberyCreationForm	 shrubberyCreation("Home");
 
 		std::cout << bob;
 		std::cout <<  shrubberyCreation;
@@ -19,7 +19,7 @@ int	main(void) {
 
 	try {
 		Bureaucrat	alice("Alice", 1);
-		RobotomyRequestForm	robotomyRequest("home");
+		RobotomyRequestForm	robotomyRequest("Bob");
 
 		std::cout << alice;
 		std::cout << robotomyRequest;
@@ -32,7 +32,7 @@ int	main(void) {
 
 	try {
 		Bureaucrat	eve("Eve", 1);
-		PresidentialPardonForm	presidentialPardon("home");
+		PresidentialPardonForm	presidentialPardon("Alice");
 
 		std::cout << eve;
 		std::cout << presidentialPardon;
