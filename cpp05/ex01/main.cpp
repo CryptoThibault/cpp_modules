@@ -14,6 +14,8 @@ int	main(void) {
 		std::cerr << "Error: " << e.what() << std::endl;
 	}
 
+	std::cout << std::endl;
+
 	try {
 		Bureaucrat	alice("Alice", 2);
 		Form		registration("Registration", 1, 1);
@@ -25,6 +27,8 @@ int	main(void) {
 	} catch (Form::GradeTooLowException& e) {
 		std::cerr << "Error: " << e.what() << std::endl;
 	}
+
+	std::cout << std::endl;
 
 	try {
 		Form	registration("Registration", 0, 1);

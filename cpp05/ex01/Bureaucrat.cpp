@@ -1,7 +1,6 @@
 #include "Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat(std::string name, int grade) {
-	_name = name;
+Bureaucrat::Bureaucrat(std::string name, int grade): _name(name) {
 	if (grade < 1)
 		throw Bureaucrat::GradeTooHighException();
 	if (grade > 150)
@@ -9,15 +8,13 @@ Bureaucrat::Bureaucrat(std::string name, int grade) {
 	_grade = grade;
 }
 
-Bureaucrat::Bureaucrat(const Bureaucrat& other) {
-	*this = other;
+Bureaucrat::Bureaucrat(const Bureaucrat& other): _name(other._name) {
+	_grade = other._grade;
 }
 
 Bureaucrat&	Bureaucrat::operator=(const Bureaucrat& other) {
-	if (this != &other) {
-		_name = other._name;
+	if (this != &other)
 		_grade = other._grade;
-	}
 	return  *this;
 }
 
@@ -36,7 +33,6 @@ void	Bureaucrat::incrementGrade(void) {
 		throw Bureaucrat::GradeTooHighException();
 	_grade--;
 }
-
 
 void	Bureaucrat::decrementGrade(void) {
 	if (_grade >= 150)

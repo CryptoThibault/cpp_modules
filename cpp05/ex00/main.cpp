@@ -12,6 +12,8 @@ int	main(void) {
 		std::cerr << "Error: " << e.what() << std::endl;
 	}
 
+	std::cout << std::endl;
+
 	try {
 		Bureaucrat	alice("Alice", 149);
 
@@ -22,7 +24,9 @@ int	main(void) {
 	} catch (Bureaucrat::GradeTooLowException& e) {
 		std::cerr << "Error: " << e.what() << std::endl;
 	}
-	
+
+	std::cout << std::endl;
+
 	try {
 		Bureaucrat	Eve("Eve", 0);
 	} catch (Bureaucrat::GradeTooHighException& e) {

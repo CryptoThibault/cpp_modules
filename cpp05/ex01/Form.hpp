@@ -32,10 +32,10 @@ public:
 	};
 
 private:
-	std::string	_name;
-	bool		_isSigned;
-	int		_gradeToSign;
-	int		_gradeToExecute;
+	const std::string	_name;
+	bool			_isSigned;
+	const int		_gradeToSign;
+	const int		_gradeToExecute;
 };
 
 std::ostream&	operator<<(std::ostream& os, const Form& form);
