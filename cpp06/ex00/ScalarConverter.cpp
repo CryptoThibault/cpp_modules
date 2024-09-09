@@ -12,7 +12,7 @@ ScalarConverter&	ScalarConverter::operator=(const ScalarConverter&) {
 
 ScalarConverter::~ScalarConverter() {}
 
-void	ScalarConverter::convert(std::string& input) {
+void	ScalarConverter::convert(const std::string& input) {
 	ScalarConverter	obj;
 
 	try {
@@ -31,21 +31,23 @@ void	ScalarConverter::convert(std::string& input) {
 
 	try {
 		std::cout << "float: ";
-		float	f = obj.toFloat(input);	
-		std::cout << f << "f" << std::endl;
+		float	f = obj.toFloat(input);
+		std::cout << f << ((f == std::floor(f)) ? ".0" : "") << "f" << std::endl;
 	} catch (const std::exception& e) {
 		std::cout << e.what() << std::endl;
 	}
 	try {
 		std::cout << "double: ";
 		double	d = obj.toDouble(input);
-		std::cout << d << std::endl;
+		std::cout << d << ((d == std::floor(d)) ? ".0" : "") << std::endl;
 	} catch (const std::exception& e) {
 		std::cout << e.what() << std::endl;
 	}
 }
 
 char	ScalarConverter::toChar(const std::string& input) const {
+	if (!std::isdigit(input[0]))
+		throw Impossible();
 	int	n = toInt(input);
 
 	if (n < 32 || n > 126)
@@ -54,6 +56,8 @@ char	ScalarConverter::toChar(const std::string& input) const {
 }
 
 int	ScalarConverter::toInt(const std::string& input) const {
+	if (!std::isdigit(input[0]))
+		throw Impossible();
 	std::stringstream	ss(input);
 	int			n;
 
@@ -62,6 +66,15 @@ int	ScalarConverter::toInt(const std::string& input) const {
 }
 
 float	ScalarConverter::toFloat(const std::string& input) const {
+	if (input == "-inf" || input == "-inff")
+		throw Inf(1, 1);
+	if (input == "+inf" || input == "+inff")
+		throw Inf(0, 1);
+	if (input == "nan" || input == "nanf")
+		throw Nan(1);
+	if (!std::isdigit(input[0]))
+		throw Impossible();
+
 	std::stringstream	ss(input);
 	float			f;
 
@@ -70,6 +83,15 @@ float	ScalarConverter::toFloat(const std::string& input) const {
 }
 
 double	ScalarConverter::toDouble(const std::string& input) const {
+	if (input == "-inf" || input == "-inff")
+		throw Inf(1, 0);
+	if (input == "+inf" || input == "+inff")
+		throw Inf(0, 0);
+	if (input == "nan" || input == "nanf")
+		throw Nan(0);
+	if (!std::isdigit(input[0]))
+		throw Impossible();
+
 	std::stringstream	ss(input);
 	double			d;
 
