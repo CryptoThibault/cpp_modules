@@ -4,8 +4,7 @@ Span::Span(): _vacant(0) {}
 
 Span::Span(unsigned int N): _vacant(N) {}
 
-Span::Span(const Span& other): _vacant(other.getVacant()), _vector(other.getVector()) {
-}
+Span::Span(const Span& other): _vacant(other.getVacant()), _vector(other.getVector()) {}
 
 Span&	Span::operator=(const Span& other) {
 	if (this != &other) {
