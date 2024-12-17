@@ -3,14 +3,14 @@
 int	main(int ac, char **av) {
 	if (ac != 2)
 	{
-		std::cout << "Error: could not open file." << std::endl;
+		std::cerr << "Error: could not open file." << std::endl;
 		return 1;
 	}
 
 	std::ifstream	input(av[1]);
 
 	if (!input) {
-		std::cout << "Error: could not open file." << std::endl;
+		std::cerr << "Error: could not open file." << std::endl;
 		return 1;
 	}
 
@@ -30,7 +30,7 @@ int	main(int ac, char **av) {
 				<< btc.convert(date, value);
 			std::cout << oss.str() << std::endl;
 		} catch (std::exception& e) {
-			std::cout << "Error: " << e.what() << std::endl;
+			std::cerr << "Error: " << e.what() << std::endl;
 		}
 	}
 
