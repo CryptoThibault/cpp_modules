@@ -2,9 +2,7 @@
 
 RPN::RPN() {}
 
-RPN::RPN(const RPN& other): _stack(other.getStack()){
-	*this = other;
-}
+RPN::RPN(const RPN& other): _stack(other.getStack()) {}
 
 RPN&	RPN::operator=(const RPN& other) {
 	if (this != &other)
